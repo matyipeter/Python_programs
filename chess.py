@@ -1,3 +1,5 @@
+# START
+
 i1 = input('Adj meg egy mezőt "A 0" formátumban.\t')
 i2 = input('Adj meg egy másik mezőt "A 0" formátumban.\t')
 
