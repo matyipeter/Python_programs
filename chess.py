@@ -27,6 +27,7 @@ class Movements():
         if abs(self.letters.index(self.first_block[0].lower())-self.letters.index(self.second_block[0].lower())) == abs((self.first_block[1]-self.second_block[1])):
             return True
 
+
 # CREATE OBJECTS
 
 piece = Movements(first, second, letters)
@@ -73,11 +74,21 @@ def bishop_move(obj):
     else:
         print('Nem lehet ilyet lépni.')
 
+
+def knight_move(obj):
+    print('Ló')
+    if abs(obj.first_block[1] - obj.second_block[1]) * abs(letters.index(obj.first_block[0].lower()) - letters.index(obj.second_block[0].lower())) == 2:
+        print('Ez egy jó lépés a lóval.')
+    else:
+        print('Nem jó a lépés')
+
+
 pawn_move(piece)
 rook_move(piece)
 king_move(piece)
 queen_move(piece)
 bishop_move(piece)
+knight_move(piece)
 
 
 
