@@ -38,49 +38,49 @@ piece = Movements(first, second, letters)
 def pawn_move(obj):
     print('Paraszt:')
     if obj.forward() and obj.first_block[1]+1 == obj.second_block[1]:
-        print('Ez egy jó lépés a paraszttal.')
+        print('Ez egy jó lépés a paraszttal.\n')
     else:
-        print('Nem lehet ilyen lépni')
+        print('Nem lehet ilyen lépni\n')
 
 
 def rook_move(obj):
     print('Bástya:')
     if obj.forward() or obj.aside():
-        print('Ez egy jó lépés a bástyával')
+        print('Ez egy jó lépés a bástyával\n')
     else:
-        print('Nem lehet ilyet lépni')
+        print('Nem lehet ilyet lépni\n')
 
 
 def king_move(obj):
     print('Kiráy')
     if (obj.forward() and abs(obj.first_block[1] - obj.second_block[1]) == 1) or (obj.aside() and abs(letters.index(first[0].lower()) - letters.index(second[0].lower())) == 1) or (obj.cross() and abs(obj.first_block[1] - obj.second_block[1]) == 1):
-        print('Ez egy jó lépés a királlyal.')
+        print('Ez egy jó lépés a királlyal.\n')
     else:
-        print('Nem lehet ilyet lépni')
+        print('Nem lehet ilyet lépni\n')
 
 
 def queen_move(obj):
     print('Királynő')
     if obj.forward() or obj.aside() or obj.cross():
-        print('Ez egy jó lépés a királynővel')
+        print('Ez egy jó lépés a királynővel\n')
     else:
-        print('Nem lehet ilyet lépni')
+        print('Nem lehet ilyet lépni\n')
 
 
 def bishop_move(obj):
     print('Futó')
     if obj.cross():
-        print('Ez egy jó lépés a futóval.')
+        print('Ez egy jó lépés a futóval.\n')
     else:
-        print('Nem lehet ilyet lépni.')
+        print('Nem lehet ilyet lépni.\n')
 
 
 def knight_move(obj):
     print('Ló')
     if abs(obj.first_block[1] - obj.second_block[1]) * abs(letters.index(obj.first_block[0].lower()) - letters.index(obj.second_block[0].lower())) == 2:
-        print('Ez egy jó lépés a lóval.')
+        print('Ez egy jó lépés a lóval.\n')
     else:
-        print('Nem jó a lépés')
+        print('Nem jó a lépés\n')
 
 
 pawn_move(piece)
