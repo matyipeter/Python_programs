@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import messagebox
 import os
 
-DESTINATION = "/home/peter/Music/"
 
 class GUI():
     def __init__(self):
@@ -24,7 +23,7 @@ class GUI():
         yt = YouTube(str(self.textbox.get('1.0', tk.END)))
 
         video = yt.streams.filter(only_audio=True).first()
-        out_file = video.download(output_path=DESTINATION)
+        out_file = video.download()
 
         base, ext = os.path.splitext(out_file)
         new_file = base + '.mp3'
